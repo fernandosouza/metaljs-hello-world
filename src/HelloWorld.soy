@@ -3,9 +3,10 @@
 /**
  * This renders the main element.
  * @param? elementClasses
+ * @param? person
  */
 {template .render}
 	<div class="helloWorld{$elementClasses ? ' ' + $elementClasses : ''}">
-    <p>Bem vindo ao MetalJS</p>
+    <p>Hello {$person or ''}</p>
 	</div>
 {/template}

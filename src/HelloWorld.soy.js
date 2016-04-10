@@ -44,7 +44,8 @@ function $render(opt_data, opt_ignored, opt_ijData) {
   ie_open('div', null, null,
       'class', 'helloWorld' + (opt_data.elementClasses ? ' ' + opt_data.elementClasses : ''));
     ie_open('p');
-      itext('Bem vindo ao MetalJS');
+      itext('Hello ');
+      itext((goog.asserts.assert((opt_data.person || '') != null), opt_data.person || ''));
     ie_close('p');
   ie_close('div');
 }
@@ -53,8 +54,8 @@ if (goog.DEBUG) {
   $render.soyTemplateName = 'HelloWorld.render';
 }
 
-exports.render.params = ["elementClasses"];
-exports.render.types = {"elementClasses":"any"};
+exports.render.params = ["elementClasses","person"];
+exports.render.types = {"elementClasses":"any","person":"any"};
 templates = exports;
 return exports;
 
