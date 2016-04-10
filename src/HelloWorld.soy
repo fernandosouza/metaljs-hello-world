@@ -1,0 +1,10 @@
+{namespace HelloWorld}
+
+/**
+ * This renders the main element.
+ * @param? elementClasses
+ */
+{template .render}
+	<div class="helloWorld{$elementClasses ? ' ' + $elementClasses : ''}">
+	</div>
+{/template}
